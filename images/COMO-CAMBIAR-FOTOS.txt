@@ -1,0 +1,19 @@
+COMO CAMBIAR FOTOS Y VIDEO - Marinas Consulting
+
+1. LOGO: Ya está colocado. Si quieres cambiarlo, sustituye:
+   - images/logo-oscuro.png -> para cabecera y pie oscuros (versión #F5E7BF)
+   - images/logo-claro.png -> para secciones claras (versión grises)
+
+2. FOTOS: En index.html cada tarjeta tiene un hueco FOTO REAL AQUÍ.
+   - Descarga tus fotos de WordPress: Medios > Biblioteca > Descargar
+   - Guárdalas en images/ con estos nombres:
+     foto-servicio-1.jpg hasta foto-servicio-5.jpg
+     foto-perfil-1.jpg hasta foto-perfil-5.jpg
+     foto-blog-1.jpg, foto-blog-2.jpg, foto-blog-3.jpg
+   - En index.html sustituye <div class="foto">FOTO REAL AQUÍ...</div> por <img src="images/foto-servicio-1.jpg" style="width:100%;aspect-ratio:4/3;object-fit:cover">
+
+3. VIDEO: En index.html busca "VIDEO: Para poner tu video".
+   - Opción YouTube: pega el iframe con tu ID XHOmBV4js_E
+   - Opción archivo: sube video.mp4 a images/ y usa <video autoplay muted loop><source src="images/video.mp4">
+
+4. TEXTOS: Edita index.html en GitHub desde el navegador, no necesitas programa.

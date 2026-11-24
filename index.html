@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marinas Consulting — Te ayudamos a anticiparte</title>
+<meta name="description" content="Marinas Consulting: fiscal, contable y legal. Transformamos desafíos en valor para tu negocio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--oscuro:#161E23;--azul:#1E4A6B;--crema:#F5E7BF;--beige:#E9DECD;--gris:#F4F2EC;--blanco:#fff;--texto:#222}
+*{box-sizing:border-box}
+body{margin:0;font-family:Montserrat,system-ui,sans-serif;color:var(--texto);background:var(--blanco);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.15;margin:0 0 12px}
+/* CABECERA - logo grande izquierda, menú derecha */
+header{position:sticky;top:0;z-index:50;background:var(--oscuro);color:#fff}
+.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:28px 24px}
+.logo img{height:130px;width:auto;display:block}
+nav{display:flex;align-items:center;gap:28px;font-size:17px;font-weight:600}
+nav a{padding:8px 4px}
+nav a:hover{color:var(--crema)}
+.btn{display:inline-block;background:var(--crema);color:#161E23;padding:12px 22px;border-radius:999px;font-weight:700}
+.btn-azul{background:var(--azul);color:#fff}
+.btn-borde{border:1px solid #fff;color:#fff;background:transparent}
+.dropdown{position:relative}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;color:#222;min-width:280px;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.18);padding:10px;z-index:60}
+.dropdown:hover .dropdown-menu{display:block}
+.dropdown-menu a{display:block;padding:10px 12px;border-radius:8px;font-weight:500}
+.dropdown-menu a:hover{background:var(--gris)}
+/* HERO - video fondo pantalla completa */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#0f1418;overflow:hidden}
+.hero-video{position:absolute;inset:0;background:linear-gradient(180deg,#1a232a,#2a3540)}
+.hero-video-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:2px dashed rgba(255,255,255,.45);margin:20px;border-radius:16px;color:#fff}
+.hero-video-placeholder small{opacity:.85}
+.hero-overlay{position:absolute;inset:0;background:rgba(22,30,35,.55)}
+.hero-content{position:relative;z-index:2;max-width:880px;padding:40px 20px}
+.hero h1{font-size:54px;color:#fff}
+.hero p.sub{font-size:19px;opacity:.95}
+.hero .cta{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* SECCIONES */
+section{padding:72px 24px}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{letter-spacing:.18em;font-size:12px;font-weight:700;color:var(--azul);text-transform:uppercase}
+section h2{font-size:38px;margin:10px 0 14px}
+section p.lead{max-width:760px;color:#444}
+.bg-gris{background:var(--gris)}
+.bg-oscuro{background:var(--oscuro);color:#fff}
+.bg-oscuro p.lead{color:#d6dbe0}
+.bg-beige{background:var(--beige)}
+/* TARJETAS - simetría 3+2 centrada */
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:36px}
+.card{flex:1 1 300px;max-width:360px;background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.bg-oscuro .card{background:#1e2a33;color:#fff}
+.foto{aspect-ratio:4/3;background:#e8e2d4;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#555;border-bottom:1px solid #eee}
+.bg-oscuro .foto{background:#2a3945;color:#d6dbe0;border-bottom:1px solid #2f3f4c}
+.foto small{font-size:12px}
+.card-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.card-body h3{font-size:22px}
+.card-body p{flex:1;color:#555;font-size:15px}
+.bg-oscuro .card-body p{color:#cbd3da}
+.card-body .link{margin-top:16px;font-weight:700;color:var(--azul)}
+.bg-oscuro .card-body .link{color:var(--crema)}
+/* CONFIANZA / BLOG */
+.testimonios{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:28px}
+.testi{flex:1 1 280px;max-width:360px;background:#fff;padding:24px;border-radius:16px;font-style:italic}
+.testi b{display:block;margin-top:12px;font-style:normal}
+/* CONTACTO */
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:14px;border-radius:12px;border:1px solid #ccc;font-family:inherit;font-size:15px;width:100%}
+textarea{min-height:130px}
+footer{background:var(--oscuro);color:#fff;padding:48px 24px 28px}
+.footer-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start}
+.footer-inner img{height:110px}
+.footer-col a{display:block;padding:4px 0;color:#d6dbe0}
+.copy{max-width:1180px;margin:32px auto 0;padding-top:16px;border-top:1px solid #2a3945;color:#9aa8b3;font-size:13px}
+@media(max-width:860px){
+  .header-inner{flex-direction:column;text-align:center;padding:20px}
+  .logo img{height:100px}
+  nav{flex-wrap:wrap;justify-content:center;gap:14px;font-size:15px}
+  .hero h1{font-size:36px}
+  section h2{font-size:30px}
+  .contacto-grid{grid-template-columns:1fr}
+  .dropdown-menu{position:static;display:none}
+  .dropdown:hover .dropdown-menu{display:block}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <!-- LOGO: para cambiarlo, sustituye images/logo-oscuro.png por tu PNG con fondo transparente -->
+    <a class="logo" href="#"><img src="images/logo-oscuro.png" alt="Marinas Consulting"></a>
+    <nav>
+      <a href="#quienes">Quiénes somos</a>
+      <div class="dropdown"><a href="#ayudamos">Así te ayudamos ▾</a>
+        <div class="dropdown-menu">
+          <a href="#ayudamos">Rural</a>
+          <a href="#ayudamos">Asociaciones y Fundaciones</a>
+          <a href="#ayudamos">Autónomos</a>
+          <a href="#ayudamos">PYMES</a>
+          <a href="#ayudamos">Asesor personal</a>
+        </div>
+      </div>
+      <div class="dropdown"><a href="#soluciones">Soluciones ▾</a>
+        <div class="dropdown-menu">
+          <a href="#soluciones">Tranquilidad fiscal</a>
+          <a href="#soluciones">Contabilidad con sentido</a>
+          <a href="#soluciones">Relaciones laborales</a>
+          <a href="#soluciones">Soporte estratégico</a>
+          <a href="#soluciones">Protección mercantil</a>
+        </div>
+      </div>
+      <a href="#confianza">En confianza</a>
+      <a class="btn" href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <div class="hero-video">
+    <!-- VIDEO: Para poner tu video de fondo, sustituye este div por el iframe de YouTube:
+    <iframe src="https://www.youtube.com/embed/XHOmBV4js_E?autoplay=1&mute=1&loop=1&playlist=XHOmBV4js_E&controls=0&playsinline=1" ...></iframe>
+    O sube un archivo video.mp4 a images/ y usa <video autoplay muted loop><source src="images/video.mp4"></video>
+    -->
+    <div class="hero-video-placeholder">
+      <strong>AQUÍ VA EL VIDEO DE FONDO</strong>
+      <small>YouTube XHOmBV4js_E — en la web final se verá en bucle a pantalla completa</small>
+      <small>Para cambiarlo, abre index.html y busca “VIDEO: Para poner tu video”</small>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div style="letter-spacing:.2em;font-size:12px;font-weight:700;color:#F5E7BF">TE AYUDAMOS A ANTICIPARTE</div>
+    <h1>Transformamos desafíos en valor para tu negocio</h1>
+    <p class="sub">Porque detrás de cada trámite hay una oportunidad: en Marinas convertimos la complejidad fiscal, contable y legal en decisiones claras, efectivas y a tu medida.</p>
+    <div class="cta">
+      <a class="btn" href="#soluciones">Conoce nuestras soluciones</a>
+      <a class="btn btn-borde" href="#quienes">Quiénes somos</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section id="quienes" class="bg-gris">
+  <div class="wrap">
+    <div class="eyebrow">Quiénes somos</div>
+    <h2>Un equipo que te ayuda a anticiparte, no solo a resolver</h2>
+    <p class="lead">En Marinas Consulting ponemos a tu disposición un equipo multidisciplinar que analiza, planifica y te acompaña en la toma de decisiones clave. Sustituye este texto por el texto de tu web actual cuando quieras.</p>
+  </div>
+</section>
+
+<!-- SOLUCIONES -->
+<section id="soluciones">
+  <div class="wrap">
+    <div class="eyebrow">Servicios</div>
+    <h2>Conoce las herramientas que tenemos para tu negocio</h2>
+    <p class="lead">Descubre las soluciones que tenemos para que no tengas que preocuparte por la burocracia y te puedas enfocar en lo que realmente importa: hacer crecer tu empresa.</p>
+    <div class="grid">
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-servicio-1.jpg</small></div><div class="card-body"><h3>Tranquilidad fiscal</h3><p>Optimizamos tu carga tributaria y te ayudamos a cumplir con todas tus obligaciones fiscales, siempre al día con la normativa vigente.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-servicio-2.jpg</small></div><div class="card-body"><h3>Contabilidad con sentido</h3><p>Llevamos tu contabilidad con rigor y claridad para que tomes decisiones informadas basadas en datos reales.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-servicio-3.jpg</small></div><div class="card-body"><h3>Relaciones laborales</h3><p>Gestionamos todo lo relacionado con tu equipo: contratos, nóminas, seguros sociales y asesoramiento en materia laboral.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-servicio-4.jpg</small></div><div class="card-body"><h3>Soporte estratégico</h3><p>Impulsamos el crecimiento de tu empresa con un acompañamiento experto que te ayuda a tomar decisiones clave.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-servicio-5.jpg</small></div><div class="card-body"><h3>Protección mercantil</h3><p>Te acompañamos en la creación, modificación o disolución de sociedades, así como en cualquier trámite legal relacionado con tu empresa.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ASÍ TE AYUDAMOS -->
+<section id="ayudamos" class="bg-oscuro">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#F5E7BF">Consultoría</div>
+    <h2>Así te ayudamos</h2>
+    <p class="lead">En Marinas Asesores no solo resolvemos problemas, te ayudamos a anticiparte a ellos. Ponemos a tu disposición un equipo multidisciplinar que analiza, planifica y te acompaña en la toma de decisiones clave.</p>
+    <div class="grid">
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-perfil-1.jpg</small></div><div class="card-body"><h3>Rural</h3><p>Ofrecemos soluciones contables, fiscales y legales adaptadas a las necesidades del sector agrícola y ganadero que te pertenecen.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-perfil-2.jpg</small></div><div class="card-body"><h3>Asociaciones y Fundaciones</h3><p>Asesoramos en la gestión legal, fiscal y administrativa para garantizar la transparencia y sostenibilidad de tu entidad.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-perfil-3.jpg</small></div><div class="card-body"><h3>Autónomos</h3><p>Te ayudamos a gestionar tus obligaciones fiscales y contables, optimizando tu tiempo y recursos empresariales en crecimiento.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-perfil-4.jpg</small></div><div class="card-body"><h3>PYMES</h3><p>Brindamos asesoramiento integral para impulsar la eficiencia y el crecimiento de tu pequeña o mediana empresa.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+      <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>foto-perfil-5.jpg</small></div><div class="card-body"><h3>Asesor personal</h3><p>Gestionamos tus trámites fiscales y legales con cercanía, confianza y a medida.</p><a class="link" href="#contacto">SABER MÁS →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- EN CONFIANZA -->
+<section id="confianza" class="bg-beige">
+  <div class="wrap">
+    <div class="eyebrow">En confianza</div>
+    <h2>En confianza</h2>
+    <div class="testimonios">
+      <div class="testi">“Por fin entiendo mis números. Me avisan antes de que haya un problema.”<b>— Cliente PYME</b></div>
+      <div class="testi">“Me llevan todo: fiscal, contable y laboral. Yo solo me dedico a mi negocio.”<b>— Cliente autónomo</b></div>
+      <div class="testi">“Cercanos, claros y siempre a tiempo. Los recomiendo.”<b>— Cliente asociación</b></div>
+    </div>
+    <p style="text-align:center;margin-top:24px;color:#555">Sustituye estos testimonios por los reales de tu web actual.</p>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="bg-gris">
+  <div class="wrap">
+    <div class="eyebrow">Blog</div>
+    <h2>Últimas publicaciones</h2>
+    <p class="lead">Para publicar: edita el archivo posts.json en GitHub desde el navegador, añade una entrada y Netlify publica sola. O entra en /admin/ para publicar desde el panel.</p>
+    <div class="grid" id="blog-grid"></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="bg-oscuro">
+  <div class="wrap contacto-grid">
+    <div>
+      <div class="eyebrow" style="color:#F5E7BF">Contacto</div>
+      <h2>¿Hablamos?</h2>
+      <p class="lead">Cuéntanos tu caso y te ayudamos a anticiparte.</p>
+      <p>📍 Sustituye aquí por tu dirección real<br>📞 Sustituye aquí por tu teléfono real<br>✉️ Sustituye aquí por tu email real</p>
+    </div>
+    <form name="contacto" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="contacto">
+      <input name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" placeholder="Cuéntanos tu caso..." required></textarea>
+      <button class="btn" type="submit">Enviar mensaje</button>
+      <small style="color:#9aa8b3">Este formulario funciona con Netlify Forms cuando la web está publicada en Netlify.</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="images/logo-oscuro.png" alt="Marinas Consulting">
+      <p style="color:#d6dbe0;max-width:320px">Te ayudamos a anticiparte.</p>
+    </div>
+    <div class="footer-col">
+      <b>Menú</b>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#ayudamos">Así te ayudamos</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#confianza">En confianza</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <b>Blog</b>
+      <a href="#blog">Últimas publicaciones</a>
+      <a href="admin/">Publicar en /admin/</a>
+    </div>
+  </div>
+  <div class="copy">© 2026 Marinas Consulting — imarinas.es</div>
+</footer>
+
+<script>
+fetch('posts.json').then(r=>r.json()).then(posts=>{
+  const grid=document.getElementById('blog-grid');
+  grid.innerHTML=posts.map(p=>`
+    <article class="card"><div class="foto">FOTO REAL AQUÍ<br><small>${p.image}</small></div>
+    <div class="card-body"><div class="eyebrow">${p.category} · ${p.date}</div><h3>${p.title}</h3><p>${p.excerpt}</p></div></article>`).join('');
+}).catch(()=>{document.getElementById('blog-grid').innerHTML='<p>Blog pendiente de publicar.</p>'});
+</script>
+</body>
+</html>
